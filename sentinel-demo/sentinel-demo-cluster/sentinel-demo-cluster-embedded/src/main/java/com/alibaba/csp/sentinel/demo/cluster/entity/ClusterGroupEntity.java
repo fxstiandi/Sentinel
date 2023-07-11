@@ -27,6 +27,8 @@ public class ClusterGroupEntity {
     private String ip;
     private Integer port;
 
+    private Integer globalFlow;
+
     private Set<String> clientSet;
 
     public String getMachineId() {
@@ -53,6 +55,15 @@ public class ClusterGroupEntity {
 
     public ClusterGroupEntity setPort(Integer port) {
         this.port = port;
+        return this;
+    }
+
+    public Integer getGlobalFlow() {
+        return globalFlow;
+    }
+
+    public ClusterGroupEntity setGlobalFlow(Integer globalFlow) {
+        this.globalFlow = globalFlow;
         return this;
     }
 

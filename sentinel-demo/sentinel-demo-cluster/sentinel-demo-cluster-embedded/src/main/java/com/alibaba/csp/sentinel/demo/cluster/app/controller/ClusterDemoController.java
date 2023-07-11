@@ -18,6 +18,7 @@ package com.alibaba.csp.sentinel.demo.cluster.app.controller;
 import com.alibaba.csp.sentinel.demo.cluster.app.service.DemoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,5 +35,10 @@ public class ClusterDemoController {
     @GetMapping("/hello/{name}")
     public String apiHello(@PathVariable String name) throws Exception {
         return service.sayHello(name);
+    }
+
+    @GetMapping("/hi/{name}")
+    public String apiHi(@PathVariable String name) throws Exception {
+        return service.sayHi(name);
     }
 }
